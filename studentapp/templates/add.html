@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color:#f5f7fb;
+        }
+
+        .form-box{
+            width:500px;
+            margin:auto;
+            margin-top:60px;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box shadow">
+
+    <h2 class="text-center mb-4">➕ Add Student</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label class="form-label">Student Name</label>
+        <input type="text" name="name" class="form-control mb-3" required>
+
+        <label class="form-label">Age</label>
+        <input type="number" name="age" class="form-control mb-3" required>
+
+        <label class="form-label">Course</label>
+        <input type="text" name="course" class="form-control mb-4" required>
+
+        <button type="submit" class="btn btn-success w-100">
+            Save Student
+        </button>
+
+    </form>
+
+    <div class="text-center mt-3">
+        <a href="/" class="btn btn-secondary">
+            ⬅ Back To Home
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
